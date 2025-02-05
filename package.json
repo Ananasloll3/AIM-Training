@@ -1,0 +1,25 @@
+{
+  "name": "02-aim-training",
+  "version": "1.0.0",
+  "description": "AIM Training",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ananasloll3/AIM-Training.git"
+  },
+  "author": "Ananasloll3",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ananasloll3/AIM-Training/issues"
+  },
+  "homepage": "https://github.com/Ananasloll3/AIM-Training#readme",
+  "dependencies": {
+    "02-aim-training": "file:"
+  },
+  "devDependencies": {
+    "electron": "^34.0.2"
+  }
+}
