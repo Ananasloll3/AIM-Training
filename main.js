@@ -20,6 +20,7 @@ app.whenReady().then(() => {
         mainWindow = null;
     });
     
+    
 });
 
 
