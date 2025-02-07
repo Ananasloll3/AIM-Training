@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+
+
+#navbar {
+    display: flex;
+    height: 10%;
+    width: 100%;
+
+    border: 1px solid black;
+}
+
+
+#aimTraining {
+    display: flex;
+    height: 80%;
+    width: 100%;
+
+    border: 1px solid black;
+
+}
+
