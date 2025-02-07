@@ -79,7 +79,7 @@ body, html {
 }
 
 
-#none_navbar {
+#score_timer_navbar {
     display: flex;
 
     justify-content: center;
@@ -91,6 +91,30 @@ body, html {
     height: 100%;
 }
 
+#score_div_navbar {
+    display: flex;
+
+    justify-content: center;
+
+
+    border: 1px solid black;
+
+    width: 50%;
+    height: 100%;
+    
+}
+
+#timer_div_navbar {
+    display: flex;
+
+    justify-content: center;
+
+
+    border: 1px solid black;
+
+    width: 50%;
+    height: 100%;
+}
 
 
 #aimTraining {
