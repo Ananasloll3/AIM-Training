@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div id="navbar">
         <div id="bar_navbar">
             <button class="boutton_bar_navbar">Menu</button>
@@ -14,19 +15,28 @@
             <button class="boutton_bar_navbar">None</button>
             <button class="boutton_bar_navbar">None</button>
             <button class="boutton_bar_navbar">None</button>
-
         </div>
+
         
         <div id="titre_navbar">
-            <b><p>AIM TRAINING</p></b>
+            <b>
+                <p>AIM TRAINING</p>
+            </b>
         </div>
 
         <div id="score_timer_navbar">
             <div id="score_div_navbar">
-
+                <p id="score">
+                    <b>0</b>
+                </p>
             </div>
             <div id="timer_div_navbar">
-
+                <p id="timer">
+                    <b>00.00</b>
+                </p>
+                <p>
+                    <b>&nbsp;/ 60s</b>
+                </p>
             </div>
         </div>
     </div>
@@ -35,12 +45,13 @@
     <div id="aimTraining">
         <div id="div_start">
             <button id="btn_start">
-                <b>
-                    START
-                </b>
+                <b>START</b>
             </button>
         </div>
-
     </div>
+
+    
+    <script src="./renderer.js"></script>
+    
 </body>
 </html>

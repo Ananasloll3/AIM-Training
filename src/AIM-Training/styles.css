@@ -60,6 +60,8 @@ body, html {
 .boutton_bar_navbar:hover {
     background-color: rgb(173, 173, 173);
     color: black;
+
+    cursor: pointer;
 }
 
 
@@ -95,27 +97,36 @@ body, html {
     display: flex;
 
     justify-content: center;
+    align-items: center;
 
 
     border: 1px solid black;
 
-    width: 50%;
+    width: 40%;
     height: 100%;
     
+}
+
+#score {
+    font-size: xx-large;
 }
 
 #timer_div_navbar {
     display: flex;
 
     justify-content: center;
+    align-items: center;
 
 
     border: 1px solid black;
 
-    width: 50%;
+    width: 60%;
     height: 100%;
 }
 
+#timer_div_navbar p {
+    font-size: xx-large;
+}
 
 #aimTraining {
     display: flex;
@@ -148,12 +159,21 @@ body, html {
     font-size: xx-large;
     border: 0px;
 
-    background-color: rgb(206, 209, 212);
+    background-color: rgb(250, 41, 41);
+    color: white;
 
     border-radius: 15px;
 }
 
 #btn_start:hover {
-    background-color: rgb(85, 84, 84);
+    background-color: rgb(6, 136, 6);
     color: aliceblue;
+
+    cursor: pointer;
 }
+
+
+
+
+
+
