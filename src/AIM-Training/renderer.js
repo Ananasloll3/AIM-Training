@@ -11,6 +11,8 @@ let timer = document.getElementById("timer");
 let btn_deplacer = document.createElement("button");
 
 let jeuStart = false;
+let timerTime = 0.0;
+
 
 
 // Detection du bouton de lancement du jeu
@@ -22,18 +24,23 @@ btnStart.addEventListener("click", () => {
 
     jeuStart = true; // Lancement du jeu
 
-    setInterval(deplacementBtn, interval.value); // Lancement de l'interval entre chaque teleportation du bouton
+    setInterval(deplacementBtn, interval.value); // Lancement de l'interval entre chaque deplacement du bouton
+    setInterval(theTimer, 100); // Lancement de l'interval pour un timer qui augmente de 0.1 chaque 100ms
     divStart.remove(); // Supression de la div start pour laisser place au jeu
 
 });
 
 
+
 //Detection du click du bouton de jeu, augmentation du score a chaque click
 btn_deplacer.addEventListener("click", () => {
 
-    score.innerHTML = parseInt(score.innerHTML) + 1
+    if (jeuStart) {
+        score.innerHTML = parseInt(score.innerHTML) + 1
+    }
     
 });
+
 
 
 // Fonction de deplacement du bouton
@@ -59,16 +66,22 @@ function deplacementBtn(){
         btn_deplacer.style.left = randomX + "px"; // Set de la position X
         btn_deplacer.style.top = randomY + "px"; // Set de la position Y
 
-        // Test pour arreter le jeu a 60s
-        if (timer.innerHTML === "60") {
-            jeuStart = false;
-        }
-
 
         console.log("Bouton deplacer");
     }
 }
 
+
+// Fonction de timer
+function theTimer() {
+    if (timerTime < 10.0) { // Test si le nombre de seconde est inferieur a 60 pour continuer
+        timerTime += 0.1;
+        timer.innerHTML = parseFloat(timerTime).toFixed(1); // Maximum un nombre apres la virgule
+    }
+    else {
+        jeuStart = false; // Desactive le jeu
+    }
+}
 
 
 
