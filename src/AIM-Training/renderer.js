@@ -18,15 +18,19 @@ let timerTime = 0.0;
 // Detection du bouton de lancement du jeu
 btnStart.addEventListener("click", () => {
 
-    btn_deplacer.className = "btn_click"; // Ajout a la class 'btn_click" pour qu'il recuperer les propriété css
-    btn_deplacer.innerHTML = "Click";
-    aimTrainingDiv.appendChild(btn_deplacer); // Ajout du bouton dans la div de jeu
+    if (parseInt(interval.value) <= 5000 && parseInt(interval.value) >= 100) {
 
-    jeuStart = true; // Lancement du jeu
+        btn_deplacer.className = "btn_click"; // Ajout a la class 'btn_click" pour qu'il recuperer les propriété css
+        btn_deplacer.innerHTML = "Click";
+        aimTrainingDiv.appendChild(btn_deplacer); // Ajout du bouton dans la div de jeu
 
-    setInterval(deplacementBtn, interval.value); // Lancement de l'interval entre chaque deplacement du bouton
-    setInterval(theTimer, 100); // Lancement de l'interval pour un timer qui augmente de 0.1 chaque 100ms
-    divStart.remove(); // Supression de la div start pour laisser place au jeu
+        jeuStart = true; // Lancement du jeu
+
+        setInterval(deplacementBtn, interval.value); // Lancement de l'interval entre chaque deplacement du bouton
+        setInterval(theTimer, 100); // Lancement de l'interval pour un timer qui augmente de 0.1 chaque 100ms
+        divStart.remove(); // Supression de la div start pour laisser place au jeu
+        
+    }
 
 });
 
@@ -74,7 +78,7 @@ function deplacementBtn(){
 
 // Fonction de timer
 function theTimer() {
-    if (timerTime < 10.0) { // Test si le nombre de seconde est inferieur a 60 pour continuer
+    if (timerTime < 59.9) { // Test si le nombre de seconde est inferieur a 60 pour continuer
         timerTime += 0.1;
         timer.innerHTML = parseFloat(timerTime).toFixed(1); // Maximum un nombre apres la virgule
     }
