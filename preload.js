@@ -8,7 +8,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
 */
 
 
-contextBridge.exposeInMainWorld('COLORDLE_API', {
-
+contextBridge.exposeInMainWorld('AIM_TRAINING_API', {
+    loadPageMenu: (whoWant) => ipcRenderer.send('loadPageMenu', whoWant),
 });
 
