@@ -10,6 +10,8 @@ let timer = document.getElementById("timer");
 
 let btn_deplacer = document.createElement("button");
 
+let buttonLoadMenu = document.getElementById("loadMenu");
+
 let jeuStart = false;
 let timerTime = 0.0;
 
@@ -44,6 +46,16 @@ btn_deplacer.addEventListener("click", () => {
     }
     
 });
+
+
+
+buttonLoadMenu.addEventListener('click', () => {
+    console.log("Changement de page vers menu");
+    
+    AIM_TRAINING_API.loadPageMenu("0"); // Charge la page menu depuis electron, le parametre permet de savoir de qui viens la demande
+});
+
+
 
 
 
