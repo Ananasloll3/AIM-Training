@@ -1,5 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
+const { eventNames } = require('process');
 
 let mainWindow;
 
@@ -24,6 +25,19 @@ app.whenReady().then(() => {
 });
 
 
+ipcMain.on('loadPageMenu', (event, whoWant) => {
+
+    console.log("Demande venant de : " + whoWant);
+    
+    mainWindow.loadFile('./src/Menu/index.html');
+
+});
 
 
+ipcMain.on('loadPageAim', (event, whoWant) => {
 
+    console.log("Demande venant de : " + whoWant);
+    
+    mainWindow.loadFile('./src/AIM-Training/index.html');
+
+});

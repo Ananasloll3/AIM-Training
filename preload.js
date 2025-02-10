@@ -10,5 +10,7 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
 contextBridge.exposeInMainWorld('AIM_TRAINING_API', {
     loadPageMenu: (whoWant) => ipcRenderer.send('loadPageMenu', whoWant),
+    loadPageAim: (whoWant) => ipcRenderer.send('loadPageAim', whoWant),
+
 });
 
