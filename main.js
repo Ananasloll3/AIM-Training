@@ -18,7 +18,7 @@ app.whenReady().then(() => {
     Log.succes("Create Browser succesful")
     Log.info("Loading page Aim...")
 
-    mainWindow.loadFile('./src/AIM-Training/index.html');
+    mainWindow.loadFile('./src/Menu/Login/index.html');
     Log.succes("Loading page Aim succesful !")
     
     
@@ -37,7 +37,7 @@ app.whenReady().then(() => {
 ipcMain.on('loadPageMenu', (event, whoWant) => {
 
     Log.info(`Load page MENU from page ${whoWant}...`)
-    mainWindow.loadFile('./src/Menu/index.html');
+    mainWindow.loadFile('./src/Menu/Login/index.html');
     Log.succes(`Page Menu Load !`);
 });
 
