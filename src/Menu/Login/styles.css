@@ -99,4 +99,21 @@ body, html {
     width: 100%;
 
     border: 1px solid black;
+
+    align-items: center;
+    justify-content: center;
+}
+
+#menu {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    width: 30%;
+    height: 70%;
+
+    border: 1px solid rgb(61, 61, 211);
+    background-color: rgb(166, 216, 216);
+    border-radius: 20px;
 }
