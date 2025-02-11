@@ -9,7 +9,8 @@ class LogAim {
         const minutes = now.getMinutes();
         const seconds = now.getSeconds();
 
-        console.log(`INFO ${hours}:${minutes}:${seconds}`);
-        
+        console.log(`INFO ${hours}:${minutes}:${seconds} : ${text}`);
     }
 }
+
+module.exports = LogAim;
