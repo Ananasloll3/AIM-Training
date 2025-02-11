@@ -2,7 +2,7 @@ const chalk = require('chalk');
 
 chalk.level = 3;
 
-function getDate() {
+const getDate = () => {
     const now = new Date();
 
     let date = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
