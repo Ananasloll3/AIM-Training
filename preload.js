@@ -9,8 +9,20 @@ contextBridge.exposeInMainWorld('electronAPI', {
 
 
 contextBridge.exposeInMainWorld('AIM_TRAINING_API', {
+
+    // ipcRenderer send : 
+
     loadPageMenu: (whoWant) => ipcRenderer.send('loadPageMenu', whoWant),
     loadPageAim: (whoWant) => ipcRenderer.send('loadPageAim', whoWant),
 
+    getConnectedSend: () => ipcRenderer.send('getConnected'),
+
+
+
+    // ipcRenderer Reply : 
+
+    getConnectedReply: () => ipcRenderer.on('getConnected', (event, data) => callback(data))
+
+    
 });
 

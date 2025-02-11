@@ -3,6 +3,7 @@ const path = require('path');
 const Log = require('./Log')
 
 let mainWindow;
+let connected = false;
 
 app.whenReady().then(() => {
     mainWindow = new BrowserWindow({
@@ -47,4 +48,12 @@ ipcMain.on('loadPageAim', (event, whoWant) => {
     Log.info(`Load page AIM from page ${whoWant}...`)
     mainWindow.loadFile('./src/AIM-Training/index.html');
     Log.succes(`Page AIm Load !`);
+});
+
+
+ipcMain.on('getConnected', (event) => {
+
+    Log.info(`Get if connected`)
+    
+    event.reply('getConnectedReply', connected)
 });
