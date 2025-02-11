@@ -81,49 +81,22 @@ body, html {
 }
 
 
-#score_timer_navbar {
+#none_navbar{
     display: flex;
-
-    justify-content: center;
-
-
-    border: 1px solid black;
 
     width: 40%;
     height: 100%;
+
+    border: 1px solid black;
 }
 
-#score_div_navbar {
+
+
+#div_menu {
     display: flex;
-
-    justify-content: center;
-    align-items: center;
-
-
-    border: 1px solid black;
-
-    width: 40%;
-    height: 100%;
     
-}
-
-#score {
-    font-size: xx-large;
-}
-
-#timer_div_navbar {
-    display: flex;
-
-    justify-content: center;
-    align-items: center;
-
+    height: 80%;
+    width: 100%;
 
     border: 1px solid black;
-
-    width: 60%;
-    height: 100%;
-}
-
-#timer_div_navbar p {
-    font-size: xx-large;
 }
