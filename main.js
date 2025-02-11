@@ -17,8 +17,13 @@ app.whenReady().then(() => {
         }
     });
 
-    mainWindow.loadFile('./src/AIM-Training/index.html');
+    Log.info("Create Browser succesful")
+    Log.info("Loading page Aim...")
 
+    mainWindow.loadFile('./src/AIM-Training/index.html');
+    Log.info("Loading page Aim succesful !")
+    
+    
     mainWindow.on('closed', () => {
         mainWindow = null;
     });
@@ -27,9 +32,13 @@ app.whenReady().then(() => {
 });
 
 
+
+// ---------------- Function ipcMain ---------------- //
+
+
 ipcMain.on('loadPageMenu', (event, whoWant) => {
 
-    Log.info(`Load page MENU from ${whoWant}`)
+    Log.info(`Load page MENU from page ${whoWant}`)
     
     mainWindow.loadFile('./src/Menu/index.html');
 
@@ -38,7 +47,7 @@ ipcMain.on('loadPageMenu', (event, whoWant) => {
 
 ipcMain.on('loadPageAim', (event, whoWant) => {
 
-    Log.info(`Load page AIM from ${whoWant}`)
+    Log.info(`Load page AIM from page ${whoWant}`)
     
     mainWindow.loadFile('./src/AIM-Training/index.html');
 
