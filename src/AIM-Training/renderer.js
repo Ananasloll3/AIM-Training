@@ -15,6 +15,7 @@ let buttonLoadAim = document.getElementById("loadAim");
 
 let jeuStart = false;
 let timerTime = 0.0;
+let dejacliquer = false;
 
 
 
@@ -43,10 +44,14 @@ btnStart.addEventListener("click", () => {
 btn_deplacer.addEventListener("click", () => {
 
     if (jeuStart) {
-        score.innerHTML = parseInt(score.innerHTML) + 1
+        if (!dejacliquer) {
+            score.innerHTML = parseInt(score.innerHTML) + 1;
+            dejacliquer = true;
+        }
     }
     
 });
+
 
 
 
@@ -61,6 +66,8 @@ buttonLoadAim.addEventListener("click", () => {
     
     AIM_TRAINING_API.loadPageAim("1"); // Charge la page AIM depuis electron, le parametre permet de savoir de qui viens la demande
 })
+
+
 
 
 // Fonction de deplacement du bouton
@@ -86,6 +93,7 @@ function deplacementBtn(){
         btn_deplacer.style.left = randomX + "px"; // Set de la position X
         btn_deplacer.style.top = randomY + "px"; // Set de la position Y
 
+        dejacliquer = false;
 
         console.log("Bouton deplacer");
     }
