@@ -15,6 +15,7 @@ let buttonLoadAim = document.getElementById("loadAim");
 
 let jeuStart = false;
 let timerTime = 0.0;
+let scoreScore = 0;
 let dejacliquer = false;
 
 
@@ -45,7 +46,8 @@ btn_deplacer.addEventListener("click", () => {
 
     if (jeuStart) {
         if (!dejacliquer) {
-            score.innerHTML = parseInt(score.innerHTML) + 1;
+            scoreScore += 1;
+            score.innerHTML = scoreScore;
             dejacliquer = true;
         }
     }
