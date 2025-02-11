@@ -98,22 +98,128 @@ body, html {
     height: 80%;
     width: 100%;
 
-    border: 1px solid black;
-
     align-items: center;
     justify-content: center;
 }
 
 #menu {
+    display: block;
+
+    text-align: center;
+    align-content: center;
+
+    width: 37%;
+    height: 73%;
+
+    margin-top: 5%;
+    border: 1px solid rgb(75, 75, 201);
+    background-color: rgb(15, 57, 105);
+    border-radius: 20px;
+
+}
+
+#formMenu {
+
+    height: 75%;
+
+    justify-content: center;
+    text-align: center;
+
+    margin-top: -10%;
+
+}
+
+#titreMenu {
+    font-size: 48px;
+    font-weight: bold;
+    color: whitesmoke;
+
+}
+
+#menuInput {
+    display: block;
+    background-color: white;
+
+    width: 75%;
+    height: 45%;
+
+    margin-left: 12%;
+}
+
+#menuInputMail {
     display: flex;
 
-    align-items: center;
+    text-align: center;
     justify-content: center;
 
-    width: 30%;
-    height: 70%;
-
-    border: 1px solid rgb(61, 61, 211);
-    background-color: rgb(166, 216, 216);
-    border-radius: 20px;
+    height: 48%;
+    width: 99%;
 }
+
+#menuBarre {
+    display: flex;
+    width: 90%;
+
+    border: 1px solid rgb(121, 120, 120);
+
+    margin-left: 5%;
+}
+
+#menuInputPass {
+    display: flex;
+
+    text-align: center;
+    justify-content: center;
+
+    height: 48%;
+    width: 99%;
+
+    border: 0;
+}
+
+#emailInput {
+    border: 0;
+    height: 99%;
+    width: 82%;
+
+    font-size: x-large;
+    padding-left: 5%;
+
+    color: rgb(121, 120, 120);
+    outline: none;
+
+}
+
+#passwordInput {
+    border: 0;
+    height: 99%;
+    width: 82%;
+
+    font-size: x-large;
+    padding-left: 5%;
+
+    color: rgb(121, 120, 120);
+    outline: none;
+
+}
+
+
+.imgMenu {
+    margin-top: 5%;
+    margin-right: 5%;
+    width: 11%;
+    height: 50%;
+    margin-left: 5%;
+}
+
+
+#formButton {
+    height: 20%;
+    width: 75%;
+
+    background-color: aqua;
+
+    font-size: xx-large;
+    font-weight: bold;
+}
+
