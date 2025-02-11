@@ -1,10 +1,8 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const path = require('path');
-const LogAim = require('./Log')
+const Log = require('./Log')
 
 let mainWindow;
-const Log = new LogAim()
-
 
 app.whenReady().then(() => {
     mainWindow = new BrowserWindow({
