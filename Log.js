@@ -1,20 +1,20 @@
 const chalk = require('chalk');
 
 
-class LogAim {
-    constructor() {
-    }
+function getDate() {
+    const now = new Date();
 
-    info(text) {
-
-        const now = new Date();
-        const hours = now.getHours();
-        const minutes = now.getMinutes();
-        const seconds = now.getSeconds();
-
-        console.log(chalk.blue(`[INFO] ${hours}:${minutes}:${seconds} : ${text}`));
-    }
-}
+    let date = `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+    return date;
+};
 
 
-module.exports = LogAim;
+const Logger = {
+
+    info: (text) => console.log(chalk.blue(`[INFO] ${getDate()} : ${text}`)),
+    error: (text) => console.log(chalk.red(`[ERROR] ${getDate()} : ${text}`))
+    
+};
+
+
+module.exports = Logger;
