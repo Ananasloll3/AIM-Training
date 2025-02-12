@@ -1,6 +1,6 @@
 const chalk = require('chalk');
 
-chalk.level = 3;
+chalk.level = 2;
 
 const getDate = () => {
     const now = new Date();
