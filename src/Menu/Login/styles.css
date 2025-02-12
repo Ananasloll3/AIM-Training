@@ -227,6 +227,7 @@ body, html {
 
 #inscription {
     color: white;
+    font-weight: lighter;
 }
 
 #inscription:hover {
