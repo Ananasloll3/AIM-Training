@@ -53,7 +53,7 @@ ipcMain.on('loadPageAim', (event, whoWant) => {
 
 ipcMain.on('getConnected', (event) => {
 
-    Log.info(`Get if connected`)
+    Log.info(`Get connected : ${connected}`)
     
-    event.reply('getConnectedReply', connected)
+    event.reply('returnConnected', connected)
 });
