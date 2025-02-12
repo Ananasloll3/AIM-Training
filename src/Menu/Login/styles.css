@@ -223,3 +223,12 @@ body, html {
     font-weight: bold;
 }
 
+
+
+#inscription {
+    color: white;
+}
+
+#inscription:hover {
+    cursor: pointer;
+}

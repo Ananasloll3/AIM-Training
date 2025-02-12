@@ -8,6 +8,7 @@ let buttonLoadAim = document.getElementById("loadAim");
 let imgLogin = document.getElementById("imgLogin");
 let imgPass = document.getElementById("imgPass");
 
+let buttonInscription = document.getElementById("inscription");
 
 
 const onFocusEmail = () => {
@@ -25,14 +26,21 @@ const onFocusPass = () => {
 buttonLoadMenu.addEventListener('click', () => {
     console.log("Changement de la page menu");
     
-    AIM_TRAINING_API.loadPageMenu("AIM"); // Charge la page MENU depuis electron, le parametre permet de savoir de qui viens la demande
+    AIM_TRAINING_API.loadPageMenu("Login"); // Charge la page MENU depuis electron, le parametre permet de savoir de qui viens la demande
 });
 
 buttonLoadAim.addEventListener("click", () => {
     console.log("Chargement de la page AIM");
     
-    AIM_TRAINING_API.loadPageAim("AIM"); // Charge la page AIM depuis electron, le parametre permet de savoir de qui viens la demande
+    AIM_TRAINING_API.loadPageAim("Login"); // Charge la page AIM depuis electron, le parametre permet de savoir de qui viens la demande
 })
+
+buttonInscription.addEventListener("click", () => {
+    console.log("Chargement de la page Signup");
+
+    AIM_TRAINING_API.loadPageSignup("Login"); // Charge la page Signup depuis electron, le parametre permet de savoir de qui viens la demande
+});
+
 
 
 imgLogin.addEventListener("click",  () => {
@@ -47,3 +55,5 @@ imgPass.addEventListener("click", () => {
 
 inputEmailInput.addEventListener('focus', onFocusEmail);
 inputPasswordInput.addEventListener('focus', onFocusPass);
+
+
