@@ -51,6 +51,23 @@ ipcMain.on('loadPageAim', (event, whoWant) => {
 });
 
 
+ipcMain.on('loadPageSignup', (event, whoWant) => {
+
+    Log.info(`Load page Signup from page ${whoWant}...`)
+    mainWindow.loadFile('./src/Menu/Signup/index.html');
+    Log.succes(`Page Signup Load !`);
+});
+
+
+ipcMain.on('loadPageLogin', (event, whoWant) => {
+
+    Log.info(`Load page Login from page ${whoWant}...`)
+    mainWindow.loadFile('./src/Menu/Login/index.html');
+    Log.succes(`Page Login Load !`);
+});
+
+
+
 ipcMain.on('getConnected', (event) => {
 
     Log.info(`Get connected : ${connected}`)

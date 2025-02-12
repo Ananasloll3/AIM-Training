@@ -13,6 +13,8 @@ contextBridge.exposeInMainWorld('AIM_TRAINING_API', {
     // ipcRenderer send : 
     loadPageMenu: (whoWant) => ipcRenderer.send('loadPageMenu', whoWant),
     loadPageAim: (whoWant) => ipcRenderer.send('loadPageAim', whoWant),
+    loadPageSignup: (whoWant) => ipcRenderer.send('loadPageSignup', whoWant),
+    loadPageLogin: (whoWant) => ipcRenderer.send('loadPageLogin', whoWant),
 
     getConnectedSend: () => ipcRenderer.send('getConnected'),
 
