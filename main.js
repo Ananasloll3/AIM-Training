@@ -7,8 +7,8 @@ let connected = false;
 
 app.whenReady().then(() => {
     mainWindow = new BrowserWindow({
-        width: 1200,
-        height: 800,
+        width: 1400,
+        height: 900,
         webPreferences: {
             preload: path.join(__dirname, 'preload.js'),
             contextIsolation: true,
@@ -19,7 +19,7 @@ app.whenReady().then(() => {
     Log.succes("Create Browser succesful")
     Log.info("Loading page Aim...")
 
-    mainWindow.loadFile('./src/Menu/Login/index.html');
+    mainWindow.loadFile('./src/Menu/Signup/index.html');
     Log.succes("Loading page Aim succesful !")
     
     
@@ -29,6 +29,7 @@ app.whenReady().then(() => {
     
     
 });
+
 
 
 
