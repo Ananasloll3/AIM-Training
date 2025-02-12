@@ -58,7 +58,7 @@ btn_deplacer.addEventListener("click", () => {
 
 
 buttonLoadMenu.addEventListener('click', () => {
-    console.log("Changement de la page menu");
+    console.log("Changement de la page Login menu");
     
     AIM_TRAINING_API.loadPageMenu("AIM"); // Charge la page MENU depuis electron, le parametre permet de savoir de qui viens la demande
 });
