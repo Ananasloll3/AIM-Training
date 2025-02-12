@@ -19,7 +19,11 @@ contextBridge.exposeInMainWorld('AIM_TRAINING_API', {
 
 
     // ipcRenderer Reply : 
-    getConnectedReply: () => ipcRenderer.on('getConnected', (event, data) => callback(data))
+    getReturnConnected: (callback) => {
+
+        ipcRenderer.removeAllListeners('returnConnected'); // Evite les doublons d'evenement
+        ipcRenderer.on('returnConnected', (event, data) => callback(data));
+    }
 
 
 });
